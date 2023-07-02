@@ -1,0 +1,70 @@
+<c-col xs="12">
+  <c-card class="mb-4">
+    <c-card-header>
+      <strong>Creacion de Cliente</strong>
+    </c-card-header>
+    <c-card-body>
+ 
+      <!-- <app-docs-example href="forms/form-control#readonly"> -->
+        <form #f="ngForm" (ngSubmit)="f.form.valid && crearCliente(f)">
+
+        <c-row class="mb-3">
+          <label cLabel class="col-sm-2 col-form-label" for="staticEmail">
+            Nombre
+          </label>
+          <div class="col-auto">
+            <input
+            ngModel
+            name="nombre"
+            cFormControl
+            placeholder="Ingrese su Nombre"
+            type="text"/>
+          </div>
+        </c-row>
+        <c-row class="mb-3">
+          <label cLabel class="col-sm-2 col-form-label" for="staticEmail">
+            Cedula
+          </label>
+          <div class="col-auto">
+            <input
+            ngModel
+            name="cedula"
+            cFormControl
+            placeholder="Ingrese su Cedula"
+            type="text"/>
+          </div>
+        </c-row> 
+        <c-row class="mb-3">
+          <label cLabel class="col-sm-2 col-form-label" for="staticEmail">
+            Telefono
+          </label>
+          <div class="col-auto">
+            <input
+            ngModel
+            name="telefono" 
+            cFormControl
+            placeholder="Ingrese su Telefono"
+            type="number"/>
+          </div>
+        </c-row>
+        <c-row class="mb-3">
+          <label cLabel class="col-sm-2 col-form-label" for="staticEmail">
+            Direccion
+          </label>
+          <div class="col-auto">
+            <input 
+            cFormControl
+            ngModel
+            name="direccion"
+            placeholder="Ingrese su Direccion"
+            type="text"/>
+          </div>
+        </c-row>
+        <div class="d-grid gap-2">
+          <button type="submit" cButton color="success">Crear Cliente</button> 
+        </div>
+      <!-- </app-docs-example> -->
+        </form>
+    </c-card-body>
+  </c-card>
+</c-col>

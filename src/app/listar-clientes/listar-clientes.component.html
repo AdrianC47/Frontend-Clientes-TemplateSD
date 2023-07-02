@@ -1,0 +1,29 @@
+<c-col xs="12">
+  <c-card class="mb-4">
+    <c-card-header>
+      <strong>Listado de Cliente</strong>
+    </c-card-header>
+    <c-card-body>
+<table cTable>
+    <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Direccion</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes; let i = index"> 
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.cedula }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.direccion }}</td>
+
+    </tr>
+    </tbody>
+  </table>
+
+    </c-card-body>
+  </c-card>
+</c-col>
